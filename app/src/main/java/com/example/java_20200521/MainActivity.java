@@ -28,16 +28,21 @@ public class MainActivity extends AppCompatActivity {
         binding.goToFirstBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //FirstActivity로 이동
-                //여행에 비유
-
-                //티켓발권
                 Intent myIntent = new Intent(MainActivity.this, FirstActivity.class);
-                //실제출발
                 startActivity(myIntent);
-
-                //이 액티비티를 종료하는 코드.
-                //finish();
+            }
+        });
+        binding.goToSecondBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivity.this,SecondActivity.class);
+                startActivity(myIntent);
+            }
+        });
+        binding.offBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }
