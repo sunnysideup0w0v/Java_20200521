@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
-        setContentView(R.layout.activity_main);
         setupEvents();
         setValues();
     }
@@ -36,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
                 Intent myIntent = new Intent(MainActivity.this, FirstActivity.class);
                 //실제출발
                 startActivity(myIntent);
+
+                //이 액티비티를 종료하는 코드.
+                //finish();
             }
         });
     }
